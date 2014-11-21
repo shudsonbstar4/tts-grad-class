@@ -61,4 +61,6 @@ ActiveRecord::Schema.define(version: 20141120233008) do
 
   add_index "users_roles", ["user_id", "role_id"], name: "index_users_roles_on_user_id_and_role_id", using: :btree
 
+  add_foreign_key "startup_resources", "users", name: "startup_resources_user_id_fk"
+
 end

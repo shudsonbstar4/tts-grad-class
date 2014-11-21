@@ -1,18 +1,34 @@
 require 'rails_helper'
 
-describe "Logging in", :type => :feature do
+describe "Startup resources", :type => :feature do
   
   let(:user){ create(:user) }
+  
+  before(:each) do
+    create(:startup_resource)
+  end
 
-  it "signs me in" do
-    visit new_user_session_path
-    within("#new_user") do
-      fill_in 'Email', :with => user.email
-      fill_in 'Password', :with => '12345678'
-      click_button 'Log in'
+  it "lets me view them" do
+    visit startup_resources_path 
+    expect(page).to have_content 'Detailed Block'
+  end
+  
+  it "lets me start to create one" do
+    visit "/"
+    click_link "Resources"
+    expect(page).to have_link 'New Startup resource'
+  end
+  
+  it "let me create one" do
+    visit "/"
+    click_link "Resources"
+    click_link 'New Startup resource'
+    within("#new_startup_resource") do
+      fill_in "Category", with: "University"
+      fill_in "Name", with: "Ventureprise"
+      fill_in "Url", with: "http://www.ventureprise.org/"
+      click_button 'Create Startup resource'
     end
-    #save_and_open_page
-
-    expect(page).to have_content 'Signed in successfully.'
+    expect(page).to have_content("Ventureprise")
   end
 end

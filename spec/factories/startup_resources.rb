@@ -2,9 +2,9 @@
 
 FactoryGirl.define do
   factory :startup_resource do
-    user_id 1
-    category "MyString"
-    name "MyString"
-    url "MyString"
+    user
+    category "News"
+    name "Detailed Block"
+    url "http://www.detailedblock.com/"
   end
 end

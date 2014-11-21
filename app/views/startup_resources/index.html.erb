@@ -1,5 +1,13 @@
 <h1>Listing startup_resources</h1>
 
+<h2>Categories</h2>
+
+<ul>
+<% StartupResource.category_list.each do |c| %>
+  <li><%= c %></li>
+<% end %>
+</ul>
+
 <table>
   <thead>
     <tr>
