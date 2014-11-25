@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @startup_list.name %>
+</p>
+
+<p>
+  <strong>Url:</strong>
+  <%= @startup_list.url %>
+</p>
+
+<%= link_to 'Edit', edit_startup_list_path(@startup_list) %> |
+<%= link_to 'Back', startup_lists_path %>
