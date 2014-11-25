@@ -3,6 +3,6 @@
 FactoryGirl.define do
   factory :startup_list do
     name "MyString"
-    url "MyString"
+    email "MyString"
   end
 end

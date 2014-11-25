@@ -42,6 +42,6 @@ class StartupListsController < ApplicationController
     end
 
     def startup_list_params
-      params.require(:startup_list).permit(:name, :url)
+      params.require(:startup_list).permit(:name, :email)
     end
 end
