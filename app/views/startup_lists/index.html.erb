@@ -4,7 +4,7 @@
   <thead>
     <tr>
       <th>Name</th>
-      <th>Email</th>
+      <th>Url</th>
       <th colspan="3">Actions</th>
     </tr>
   </thead>
@@ -13,7 +13,7 @@
     <% @startup_lists.each do |startup_list| %>
       <tr>
         <td><%= startup_list.name %></td>
-        <td><%= startup_list.email %></td>
+        <td><%= startup_list.url %></td>
         <td><%= link_to 'Show', startup_list %></td>
         <td><%= link_to 'Edit', edit_startup_list_path(startup_list) %></td>
         <td><%= link_to 'Destroy', startup_list, method: :delete, data: { confirm: 'Are you sure?' } %></td>
