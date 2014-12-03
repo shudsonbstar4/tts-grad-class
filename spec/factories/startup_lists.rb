@@ -2,7 +2,7 @@
 
 FactoryGirl.define do
   factory :startup_list do
-    name "MyString"
-    email "MyString"
+    name "AddShoppers"
+    url "http://www.addshoppers.com"
   end
 end
