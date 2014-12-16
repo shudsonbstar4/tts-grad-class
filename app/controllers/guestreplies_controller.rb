@@ -15,7 +15,7 @@ class GuestrepliesController < ApplicationController
   end
 
   def new
-    @guestreply = Guestreply.new
+    @guestreply = Guestreply.new(:event_id => @event_id)
     respond_with(@guestreply)
   end
 
