@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  resources :events do
+    resources :guestreplies
+  end
+
+  resources :guestreplies
+
   resources :startup_lists
 
   resources :startup_resources

@@ -1,0 +1,29 @@
+<h1>Listing guestreplies</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>User</th>
+      <th>Event</th>
+      <th>Guest count</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @guestreplies.each do |guestreply| %>
+      <tr>
+        <td><%= guestreply.user_id %></td>
+        <td><%= guestreply.event_id %></td>
+        <td><%= guestreply.guest_count %></td>
+        <td><%= link_to 'Show', guestreply %></td>
+        <td><%= link_to 'Edit', edit_guestreply_path(guestreply) %></td>
+        <td><%= link_to 'Destroy', guestreply, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Guestreply', new_guestreply_path %>

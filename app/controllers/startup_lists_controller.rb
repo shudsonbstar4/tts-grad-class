@@ -1,5 +1,6 @@
 class StartupListsController < ApplicationController
   before_action :set_startup_list, only: [:show, :edit, :update, :destroy]
+  #Set authenticate here and :except => [:show, :index]
 
   respond_to :html
 

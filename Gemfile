@@ -49,6 +49,8 @@ gem "bootstrap_form"
 gem "kaminari"
 gem "foreigner"
 gem "rolify"
+gem "gibbon"
+
 group :development, :test do
   gem "rspec-rails"
   gem "guard-rspec"

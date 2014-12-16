@@ -9,17 +9,20 @@ describe "Startup resources", :type => :feature do
   end
 
   it "lets me view them" do
+    #login
     visit startup_resources_path 
     expect(page).to have_content 'Detailed Block'
   end
   
   it "lets me start to create one" do
+    #login
     visit "/"
     click_link "Resources"
     expect(page).to have_link 'New Startup resource'
   end
   
   it "let me create one" do
+    #parselogin
     visit "/"
     click_link "Resources"
     click_link 'New Startup resource'

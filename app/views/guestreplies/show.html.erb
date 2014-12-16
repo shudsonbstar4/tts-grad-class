@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @guestreply.user_id %>
+</p>
+
+<p>
+  <strong>Event:</strong>
+  <%= @guestreply.event_id %>
+</p>
+
+<p>
+  <strong>Guest count:</strong>
+  <%= @guestreply.guest_count %>
+</p>
+
+<%= link_to 'Edit', edit_guestreply_path(@guestreply) %> |
+<%= link_to 'Back', guestreplies_path %>

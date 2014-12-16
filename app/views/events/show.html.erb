@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Group:</strong>
+  <%= @event.group_id %>
+</p>
+
+<p>
+  <strong>Event title:</strong>
+  <%= @event.event_title %>
+</p>
+
+<p>
+  <strong>Event desc:</strong>
+  <%= @event.event_desc %>
+</p>
+
+<p>
+  <strong>Start time:</strong>
+  <%= @event.start_time %>
+</p>
+
+<p>
+  <strong>End time:</strong>
+  <%= @event.end_time %>
+</p>
+
+<%= link_to 'Edit', edit_event_path(@event) %> |
+<%= link_to 'Back', events_path %>

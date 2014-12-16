@@ -16,3 +16,11 @@
 /tmp
 config/database.yml
 vendor/bundle
+.env
+
+#Ignore all vim swap files
+**/*.sw*
+
+#Ignore DS_Store
+.DS_Store
+public/uploads/**
